@@ -1,0 +1,6 @@
+POST  https://gaie83mmoi.execute-api.eu-west-1.amazonaws.com/prod/orderItem
+
+{
+  "item": "Banana", "quantity": 4, "sendNotification": true, "requestDelivery": false
+}
+###

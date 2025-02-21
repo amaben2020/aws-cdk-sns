@@ -14,7 +14,7 @@ export class ArticleSNS extends cdk.Stack {
       this,
       'OrderItem',
       {
-        entry: join(__dirname, 'orderItem', 'handler.ts'),
+        entry: join(__dirname, '..', 'services', 'lambdas', 'order-item.ts'),
         handler: 'handler',
         environment: {
           TOPIC_ARN: topic.topicArn,
@@ -30,7 +30,7 @@ export class ArticleSNS extends cdk.Stack {
       this,
       'ExecuteOrder',
       {
-        entry: join(__dirname, 'executeOrder', 'handler.ts'),
+        entry: join(__dirname, '..', 'services', 'lambdas', 'execute-order.ts'),
         handler: 'handler',
       }
     );
@@ -42,7 +42,13 @@ export class ArticleSNS extends cdk.Stack {
       this,
       'RequestDelivery',
       {
-        entry: join(__dirname, 'requestDelivery', 'handler.ts'),
+        entry: join(
+          __dirname,
+          '..',
+          'services',
+          'lambdas',
+          'request-delivery.ts'
+        ),
         handler: 'handler',
       }
     );
@@ -61,7 +67,13 @@ export class ArticleSNS extends cdk.Stack {
       this,
       'SendNotification',
       {
-        entry: join(__dirname, 'sendNotification', 'handler.ts'),
+        entry: join(
+          __dirname,
+          '..',
+          'services',
+          'lambdas',
+          'send-notification.ts'
+        ),
         handler: 'handler',
       }
     );
